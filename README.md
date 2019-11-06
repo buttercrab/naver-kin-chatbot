@@ -1,1 +1,1 @@
-# naver-kin-chatbot
+# Naver Q&A ChatBot
