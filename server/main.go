@@ -1,7 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"github.com/buttercrab/naver-kin-chatbot/server/httpHandler"
+	"log"
+	"net/http"
+	"os"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	port := os.Getenv("PORT")
+
+	http.HandleFunc("/api", httpHandler.ExampleHandler)
+
+	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
